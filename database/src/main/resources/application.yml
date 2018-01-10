@@ -1,0 +1,18 @@
+server:
+  port: 0
+
+spring:
+  application:
+    name: database-jpa-connector
+  jpa:
+    generate-ddl: true
+  datasource:
+    url: jdbc:mysql://localhost/test
+    username: root
+    password: root
+    name: test
+
+eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 5
+    instance-id: ${spring.application.name}:${random.value}
